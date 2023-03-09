@@ -8,6 +8,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 63px;
+  position: relative;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 header .website-logo {
@@ -16,11 +17,9 @@ header .website-logo {
 
 .banner {
   text-align: center;
-  z-index: -9999;
-  position: absolute;
   width: 100%;
   padding-bottom: 50px;
-  background: #D2D2D2;
+  background: #F6F6F6;
 }
 .banner form {
   width: 100%;
@@ -46,9 +45,11 @@ header .website-logo {
   background: #EAEAEA;
 }
 .banner h1 {
+  width: 280px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
+  margin-left: 45px;
   font-family: "Roboto";
 }
 .banner p {
@@ -71,6 +72,157 @@ header .website-logo {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
+}
+
+.functioning {
+  font-family: "roboto";
+  line-height: 28.13px;
+  height: 390px;
+}
+.functioning h1 {
+  margin: 48px 80px 28px 20px;
+}
+.functioning .functioning__container-select {
+  line-height: 19px;
+  height: 72.38px;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 20px 20px 25px 32px;
+}
+.functioning .functioning__container-select:hover {
+  background: #F5EDFF;
+}
+.functioning .functioning__container-select:hover .functioning__logo {
+  color: #9356DC;
+}
+.functioning .functioning__number {
+  background: #9356DC;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 20px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  padding: 3px;
+}
+.functioning .functioning__logo {
+  color: #7E7E7E;
+  font-size: 18px;
+  margin: 0px 20px 0px 35px;
+}
+.functioning p {
+  width: 100%;
+}
+
+.restaurant {
+  background: #F6F6F6;
+  font-family: "roboto";
+  padding: 20px 0px 40px;
+}
+.restaurant h1 {
+  margin: 30px 80px 20px 20px;
+}
+.restaurant .restaurant__card {
+  height: 240px;
+  margin: 0px 20px 20px 20px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.restaurant .restaurant__card .restaurant__new {
+  display: flex;
+  position: absolute;
+  width: 75px;
+  height: 20px;
+  right: 30px;
+  bottom: -280px;
+  background: #99E2D0;
+  color: #008766;
+  padding: 5px;
+  font-size: 14px;
+  font-family: roboto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+.restaurant .restaurant__card .restaurant__new--2 {
+  display: flex;
+  position: absolute;
+  width: 75px;
+  height: 20px;
+  right: 30px;
+  bottom: -540px;
+  background: #99E2D0;
+  color: #008766;
+  padding: 5px;
+  font-size: 14px;
+  font-family: roboto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+.restaurant .restaurant__card img {
+  width: 100%;
+  height: 170px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  object-fit: cover;
+}
+.restaurant .restaurant__card .restaurant__container-title-heart {
+  display: flex;
+  justify-content: space-between;
+  margin: 13px;
+}
+.restaurant .restaurant__card .restaurant__container-title-heart .restaurant__title {
+  font-family: "roboto";
+  font-weight: 700;
+  margin: 0;
+}
+.restaurant .restaurant__card .restaurant__container-title-heart .restaurant__title p {
+  margin: 5px 0px;
+  font-weight: 300;
+}
+.restaurant .restaurant__card .restaurant__container-title-heart .restaurant__heart {
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+  padding: 0px 10px;
+}
+
+footer {
+  background: #353535;
+  padding: 20px 0px 15px 20px;
+}
+footer p {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  color: white;
+}
+footer ul {
+  font-family: "roboto";
+  list-style-type: none;
+  padding: 0;
+}
+footer ul li {
+  color: white;
+  line-height: 25px;
+}
+footer ul li span {
+  display: inline-block;
+  margin-right: 0px;
+  font-size: 11px;
+  width: 15px;
+  height: 13px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,29 @@
+footer {
+    background: #353535;
+    padding: 20px 0px 15px 20px;
+    p{
+        font-family: 'Shrikhand';
+        font-size: 18px;
+        color: white;
+    }
+    ul{
+        font-family: 'roboto';
+        list-style-type: none;
+        padding: 0;
+        li {
+            span {
+                display: inline-block;
+                margin-right: 0px;
+                font-size: 11px;
+                width: 15px;
+                height: 13px;
+            }
+            color: white;
+            line-height: 25px;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
