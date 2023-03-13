@@ -1,0 +1,53 @@
+.restaurant__heart :nth-child(1) {
+    position: relative;
+    cursor: pointer;
+}
+
+.restaurant__heart :nth-child(2) {
+    position: relative;
+    color: transparent;
+    top: -30px;
+    opacity: 0;
+    cursor: pointer;
+    animation: heart-anim-reverse 1000ms;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-background-clip:text;
+    
+    &:active{
+        opacity: 1;
+        animation: heart-anim 1000ms;
+        background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        background-clip: text;
+        -webkit-background-clip:text;
+    } 
+}
+
+@keyframes heart-anim {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); 
+        background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        background-clip: text;
+        -webkit-background-clip:text;
+    }
+}
+
+@keyframes heart-anim-reverse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0; 
+        background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        background-clip: text;
+        -webkit-background-clip:text;
+    }
+}
+
