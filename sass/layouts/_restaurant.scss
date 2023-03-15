@@ -6,6 +6,7 @@
         margin: 30px 80px 20px 20px;
     }
     .restaurant__card{
+        position: relative;
         height: 240px;
         margin: 0px 20px 20px 20px;
         border-radius: 15px;
@@ -17,7 +18,7 @@
             position: absolute;
             width: 75px;
             height: 20px;
-            right: 30px;
+            right: 10px;
             margin: 10px 0px;
             background: $tertiaryColor;
             color: #008766;
@@ -57,5 +58,27 @@
                 padding: 0px 10px;
             }
         }    
-    } 
+    }
+    
+    @media screen and (min-width:768px){
+        .container-restaurant__card__new,.container-restaurant__card{
+            display: flex;
+            .restaurant__card{
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (min-width:1280px){
+
+        .container__restaurant{
+            display: flex;
+            .container-restaurant__card__new,.container-restaurant__card{
+                width: 100%;
+                .restaurant__card{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 body {
-  margin: 0px;
+  margin: auto;
+  max-width: 1440px;
 }
 
 header {
@@ -83,12 +84,15 @@ header .website-logo {
 .functioning {
   font-family: "roboto";
   line-height: 28.13px;
-  height: 390px;
 }
 .functioning h1 {
   margin: 48px 80px 28px 20px;
 }
-.functioning .functioning__container-select {
+.functioning .functioning__container {
+  margin-bottom: 50px;
+}
+.functioning .functioning__container .functioning__container-select {
+  position: relative;
   line-height: 19px;
   height: 72.38px;
   background: #F7F7F7;
@@ -101,35 +105,32 @@ header .website-logo {
   margin: 20px 20px 25px 32px;
   transition: ease-in-out 1000ms;
 }
-.functioning .functioning__container-select:hover {
+.functioning .functioning__container .functioning__container-select:hover {
   background: #F5EDFF;
 }
-.functioning .functioning__container-select:hover .functioning__logo {
+.functioning .functioning__container .functioning__container-select:hover .functioning__logo {
   color: #9356DC;
 }
-.functioning .functioning__number {
+.functioning .functioning__container .functioning__number {
   background: #9356DC;
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 20px;
+  left: -13px;
   color: white;
   border-radius: 50%;
   text-align: center;
   padding: 3px;
 }
-.functioning .functioning__logo {
+.functioning .functioning__container .functioning__logo {
   color: #7E7E7E;
   font-size: 18px;
   margin: 0px 20px 0px 35px;
 }
-.functioning p {
+.functioning .functioning__container p {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .functioning .functioning {
-    height: 290px;
-  }
   .functioning .functioning__container {
     display: flex;
     flex-wrap: wrap;
@@ -145,6 +146,15 @@ header .website-logo {
     left: -12px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .functioning .functioning__container {
+    justify-content: space-between;
+    margin: 0px 20px 50px;
+  }
+  .functioning .functioning__container .functioning__container-select {
+    width: 30%;
+  }
+}
 
 .restaurant {
   background: #F6F6F6;
@@ -155,6 +165,7 @@ header .website-logo {
   margin: 30px 80px 20px 20px;
 }
 .restaurant .restaurant__card {
+  position: relative;
   height: 240px;
   margin: 0px 20px 20px 20px;
   border-radius: 15px;
@@ -166,7 +177,7 @@ header .website-logo {
   position: absolute;
   width: 75px;
   height: 20px;
-  right: 30px;
+  right: 10px;
   margin: 10px 0px;
   background: #99E2D0;
   color: #008766;
@@ -204,6 +215,25 @@ header .website-logo {
   height: 25px;
   padding: 0px 10px;
 }
+@media screen and (min-width: 768px) {
+  .restaurant .container-restaurant__card__new, .restaurant .container-restaurant__card {
+    display: flex;
+  }
+  .restaurant .container-restaurant__card__new .restaurant__card, .restaurant .container-restaurant__card .restaurant__card {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .restaurant .container__restaurant {
+    display: flex;
+  }
+  .restaurant .container__restaurant .container-restaurant__card__new, .restaurant .container__restaurant .container-restaurant__card {
+    width: 100%;
+  }
+  .restaurant .container__restaurant .container-restaurant__card__new .restaurant__card, .restaurant .container__restaurant .container-restaurant__card .restaurant__card {
+    width: 100%;
+  }
+}
 
 footer {
   background: #353535;
@@ -235,6 +265,20 @@ footer ul li a {
   color: white;
 }
 
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer ul li {
+    margin: 0px 20px 0px 0px;
+  }
+}
 .restaurant__heart :nth-child(1) {
   position: relative;
   cursor: pointer;
