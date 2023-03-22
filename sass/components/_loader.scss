@@ -1,0 +1,80 @@
+//animation de la modale blanche
+@keyframes page-loader {
+    0% {
+        background-color:white;
+        opacity: 1;
+        z-index: 1;
+    }
+    
+    66% {
+        background-color: white;
+        opacity: 1;
+        z-index: 0.5;
+    }
+    
+    100%{ 
+        background-color:transparent; 
+        opacity: 0;
+        z-index: 0; 
+    }
+}
+
+.page__loader {
+    animation: page-loader 3.5s ease-in-out;
+    animation-fill-mode: forwards;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    background-color: #fff;
+
+    .loader {
+        width: 70px;
+        height: 70px;
+        border-left: 5px solid $primaryColor;
+        border-bottom: 3px solid $secondaryColor;
+        border-top: 2px ridge $tertiaryColor;
+        border-right: 1px solid white;
+        border-radius: 50%;
+        position: relative;
+        animation: rotation 2.5s linear;
+        opacity: 0;
+    }
+
+    // animation du loader spinner
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(2500deg);
+            opacity: 0;
+        }
+    } 
+
+    .message { 
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-size: 16px;
+        color: $primaryColor;
+        font-family: 'shrikhand';
+        animation: hide-message 2.5s linear ;
+        opacity: 0;
+    }
+
+    // animation pour cacher le message
+    @keyframes hide-message {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}   

@@ -1,0 +1,197 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+    // flèche de retour accueil
+    .return{
+        display: flex;
+        left: 23px;
+        font-size: 20px;
+        position: absolute;
+        align-items: center;
+        i {
+            color: $backgroundFooterColor;
+        }
+        
+    }
+    .website-logo {
+        width: 162px;
+    }
+
+}
+
+.restaurant-images {
+    width: 100%;
+    object-fit: cover;
+    height: 275px;
+}
+
+#menu{
+    background: #F6F6F6;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    position: relative;
+    margin: -55px auto auto;
+    max-width: 1055px;
+    padding: 32px 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        display: flex;
+        justify-content: space-between;
+        font-size: 28px;
+        line-height: 41px;
+        font-family: 'shrikhand';
+        text-align: center;
+        margin: 0;
+        // coeur à coté du titre
+        .restaurant__heart :nth-child(1){
+            left: 20px;
+        }
+        .restaurant__heart :nth-child(2){
+            top:0;
+            right: 14px;
+        }
+    }
+    .menu__card{
+        margin: 30px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        height: 275px;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 634px;
+    
+        .menu__card__title{
+            font-family: "roboto";
+            font-size: 15px;
+            border-bottom: solid;
+            height: 25px;
+            width: 37px;
+            margin: 0;
+            border-color: $tertiaryColor;
+        }
+        .menu__card__description{
+            background: white;
+            border-radius: 15px;
+            padding: 12px;
+            height: 45px;
+            box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            cursor: pointer;    
+           
+            h2{
+                font-family: 'roboto';
+                font-size: 17px;
+                margin: 0;
+                width: 100%;
+            }
+
+            p {
+                width: 85%;
+                margin: 5px 0px;
+                font-family: 'roboto';
+                font-size: 14.5px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            strong{
+                font-family: 'roboto';
+            }
+
+            .container-check { 
+                display: none;
+                background: $tertiaryColor;
+                display: flex;
+                position: absolute;
+                right: 0px;
+                width: 60px;
+                height: 69px;
+                border-bottom-right-radius: 15px;
+                border-top-right-radius: 15px;
+                justify-content: center;
+                align-items: center; 
+                transform-origin: 99%;
+                transform: scaleX(0);
+                transition: transform 800ms cubic-bezier(.25,.25,.73,.73);
+                .check {
+                    color: $tertiaryColor;
+                    background: white;
+                    border-radius: 50%;
+                    padding: 2px;
+                    width: 16px;
+                    text-align: center;
+                    font-size: 13px;
+                    transition: transform 800ms cubic-bezier(0.10, 0.39, 0.59,.99);
+                }
+            }
+
+            // animation coche verte au survol avec rotation du check
+            &:hover{
+                .container-check{
+                    transform: scaleX(1);
+                    .check{
+                        transform: rotate(360deg);
+                        transition: transform 800ms cubic-bezier(0.10, 0.39, 0.59,.99);  
+                    }
+                }    
+            }        
+        }
+    }
+            
+    button {
+        margin: 32px 0px 0px;
+    }
+    
+    // reduction du texte au survol 
+    .menu__card__description:hover {
+        justify-content: flex-start;
+        &.menu__card__description p {
+            width: 71%;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        .menu__card__description:hover {
+            &.menu__card__description p {
+                width: 85%;
+            }
+        }
+    }
+
+
+// Animation en cascade des plats par groupe entré/plat/dessert
+@keyframes cascade {
+        0% { 
+            opacity:0 ;
+        } 
+        100%{
+            opacity:1 ;
+        }
+    }
+
+.menu__card {
+        &:nth-child(2){
+            animation: cascade  1s ;
+        }
+        &:nth-child(3){
+            animation: cascade  4s;
+        }
+        &:nth-child(4) {
+            animation: cascade  8s; 
+        }          
+    }
+}
+
+
+
+

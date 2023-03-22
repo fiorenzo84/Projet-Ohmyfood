@@ -8,17 +8,24 @@
     <script
       src="https://kit.fontawesome.com/52f5358f63.js"
       crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="" />
     <title>Ohmyfood</title>
   </head>
   <body>
-    <!-- 1 HEADER (logo)-->
+    <!-- LOADER -->
+    <div class="page__loader">
+      <span class="loader"></span>
+      <div class="message">Veuillez patienter...</div>
+    </div>
+
+    <!-- HEADER (logo)-->
     <header>
       <img
         src="/assets/images/logo/ohmyfood.png"
         alt="logo du site ohmyfood"
         class="website-logo" />
     </header>
-    <!-- 2 SECTION (hero banner)  -->
+    <!-- SECTION (hero banner)  -->
     <section class="banner">
       <form>
         <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
@@ -28,7 +35,7 @@
       <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
       <button class="banner__button">Explorer nos restaurants</button>
     </section>
-    <!-- 3 SECTION (fonctionnement)  -->
+    <!-- SECTION (fonctionnement)  -->
     <section class="functioning">
       <h1>Fonctionnement</h1>
       <div class="functioning__container">
@@ -55,26 +62,29 @@
         </div>
       </div>
     </section>
-    <!-- 4 SECTION (restaurants)  -->
+    <!-- SECTION (restaurants)  -->
     <section class="restaurant">
       <h1>Restaurants</h1>
       <div class="container__restaurant">
         <div class="container-restaurant__card__new">
           <div class="restaurant__card">
-            <div class="restaurant__new">Nouveau</div>
-            <img
-              src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-              alt="photo du restaurant la palette du goût" />
-            <div class="restaurant__container-title-heart">
-              <div class="restaurant__title">
-                La palette du goût
-                <p>Ménilmontant</p>
+            <a href="./restaurants/palette.html">
+              <div class="restaurant__new">Nouveau</div>
+              <img
+                src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="photo du restaurant la palette du goût" />
+
+              <div class="restaurant__container-title-heart">
+                <div class="restaurant__title">
+                  La palette du goût
+                  <p>Ménilmontant</p>
+                </div>
+              </a>
+                <span class="restaurant__heart">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-heart"></i>
+                </span>
               </div>
-              <span class="restaurant__heart">
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-heart"></i>
-              </span>
-            </div>
           </div>
           <div class="restaurant__card">
             <div class="restaurant__new">Nouveau</div>
@@ -127,7 +137,7 @@
         </div>
       </div>
     </section>
-    <!-- 5 FOOTER (avec mail contact)  -->
+    <!-- FOOTER (avec mail contact)  -->
     <footer>
       <p>ohmyfood</p>
       <ul>
