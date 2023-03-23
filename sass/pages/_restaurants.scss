@@ -65,7 +65,7 @@ header {
         justify-content: space-between;
         width: 100%;
         max-width: 634px;
-    
+
         .menu__card__title{
             font-family: "roboto";
             font-size: 15px;
@@ -147,16 +147,27 @@ header {
             }        
         }
     }
+
+    // une entrée supplémentaire pour les restaurant la note enchantée.
+    .note--enchantee {
+        height: 365px;    
+    }
             
     button {
         margin: 32px 0px 0px;
     }
     
-    // reduction du texte au survol 
+    // reduction des texte au survol 
     .menu__card__description:hover {
         justify-content: flex-start;
         &.menu__card__description p {
             width: 71%;
+        }
+        &.menu__card__description h2 {
+            width: 80%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
     }
 
@@ -180,8 +191,9 @@ header {
     }
 
 .menu__card {
+
         &:nth-child(2){
-            animation: cascade  1s ;
+            animation: cascade  1s ;   
         }
         &:nth-child(3){
             animation: cascade  4s;

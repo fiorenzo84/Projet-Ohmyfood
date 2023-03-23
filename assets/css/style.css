@@ -130,6 +130,7 @@ header .website-logo {
 }
 .functioning .functioning__container p {
   width: 100%;
+  cursor: default;
 }
 @media screen and (min-width: 768px) {
   .functioning .functioning__container {
@@ -145,6 +146,7 @@ header .website-logo {
     position: relative;
     width: 30px;
     left: -12px;
+    cursor: default;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -172,6 +174,10 @@ header .website-logo {
   border-radius: 15px;
   background: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: ease-in-out 0.5s;
+}
+.restaurant .restaurant__card:hover {
+  transform: scale(1.03);
 }
 .restaurant .restaurant__card a {
   text-decoration: none;
@@ -295,12 +301,12 @@ footer ul li a {
   top: -30px;
   opacity: 0;
   cursor: pointer;
-  animation: heart-anim-reverse 1000ms;
+  animation: heart-anim-reverse 1200ms;
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-clip: text;
   -webkit-background-clip: text;
 }
-.restaurant__heart :nth-child(2):active {
+.restaurant__heart :nth-child(2):hover {
   opacity: 1;
   animation: heart-anim 1000ms;
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -311,11 +317,9 @@ footer ul li a {
 @keyframes heart-anim {
   0% {
     opacity: 0;
-    transform: scale(0);
   }
   100% {
     opacity: 1;
-    transform: scale(1);
     background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -324,10 +328,8 @@ footer ul li a {
 @keyframes heart-anim-reverse {
   0% {
     opacity: 1;
-    transform: scale(1);
   }
   100% {
-    transform: scale(0);
     opacity: 0;
     background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     background-clip: text;
@@ -471,6 +473,9 @@ header .website-logo {
   transform: rotate(360deg);
   transition: transform 800ms cubic-bezier(0.1, 0.39, 0.59, 0.99);
 }
+#menu .note--enchantee {
+  height: 365px;
+}
 #menu button {
   margin: 32px 0px 0px;
 }
@@ -479,6 +484,12 @@ header .website-logo {
 }
 #menu .menu__card__description:hover.menu__card__description p {
   width: 71%;
+}
+#menu .menu__card__description:hover.menu__card__description h2 {
+  width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 @media screen and (min-width: 768px) {
   #menu .menu__card__description:hover.menu__card__description p {
@@ -512,7 +523,6 @@ header .website-logo {
   66% {
     background-color: white;
     opacity: 1;
-    z-index: 0.5;
   }
   100% {
     background-color: transparent;
