@@ -249,6 +249,7 @@ header .website-logo {
 footer {
   background: #353535;
   padding: 20px 0px 15px 20px;
+  position: relative;
 }
 footer p {
   font-family: "Shrikhand";
