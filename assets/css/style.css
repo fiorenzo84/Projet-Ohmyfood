@@ -379,7 +379,7 @@ header .website-logo {
 #menu h1 {
   display: flex;
   justify-content: space-between;
-  font-size: 28px;
+  font-size: 27px;
   line-height: 41px;
   font-family: "shrikhand";
   text-align: center;
@@ -390,7 +390,7 @@ header .website-logo {
 }
 #menu h1 .restaurant__heart :nth-child(2) {
   top: 0;
-  right: 14px;
+  right: 12px;
 }
 #menu .menu__card {
   margin: 30px 0px 0px 0px;
@@ -515,6 +515,11 @@ header .website-logo {
   animation: cascade 8s;
 }
 
+@media screen and (max-width: 374px) {
+  #menu h1 {
+    flex-direction: column;
+  }
+}
 @keyframes page-loader {
   0% {
     background-color: white;

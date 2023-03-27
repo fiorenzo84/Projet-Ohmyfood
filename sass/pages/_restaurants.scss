@@ -43,7 +43,7 @@ header {
     h1{
         display: flex;
         justify-content: space-between;
-        font-size: 28px;
+        font-size: 27px;
         line-height: 41px;
         font-family: 'shrikhand';
         text-align: center;
@@ -54,7 +54,8 @@ header {
         }
         .restaurant__heart :nth-child(2){
             top:0;
-            right: 14px;
+            right: 12px;
+            //font-size: 1.7rem;
         }
     }
     .menu__card{
@@ -180,8 +181,8 @@ header {
     }
 
 
-// Animation en cascade des plats par groupe entré/plat/dessert
-@keyframes cascade {
+    // Animation en cascade des plats par groupe entré/plat/dessert
+    @keyframes cascade {
         0% { 
             opacity:0 ;
         } 
@@ -190,7 +191,7 @@ header {
         }
     }
 
-.menu__card {
+    .menu__card {
 
         &:nth-child(2){
             animation: cascade  1s ;   
@@ -204,6 +205,9 @@ header {
     }
 }
 
-
-
-
+// coeur en dessous du titre en dessous de 375px
+    @media screen and (max-width:374px) {
+        #menu h1   {
+            flex-direction: column;
+        }
+    }
