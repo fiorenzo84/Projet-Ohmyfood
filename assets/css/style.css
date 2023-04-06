@@ -75,6 +75,7 @@ header .website-logo {
   border: none;
   transition: ease-in-out 1000ms;
   opacity: 1;
+  z-index: 1;
 }
 .banner__button:hover {
   opacity: 0.7;
@@ -400,6 +401,7 @@ header .website-logo {
   justify-content: space-between;
   width: 100%;
   max-width: 634px;
+  opacity: 1;
 }
 #menu .menu__card .menu__card__title {
   font-family: "roboto";
@@ -419,7 +421,6 @@ header .website-logo {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
   cursor: pointer;
 }
@@ -430,32 +431,34 @@ header .website-logo {
   width: 100%;
 }
 #menu .menu__card .menu__card__description p {
-  width: 85%;
+  width: 90%;
   margin: 5px 0px;
   font-family: "roboto";
   font-size: 14.5px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
 }
 #menu .menu__card .menu__card__description strong {
   font-family: "roboto";
+  display: flex;
+  width: 9%;
+  justify-content: flex-end;
 }
 #menu .menu__card .menu__card__description .container-check {
-  display: none;
   background: #99E2D0;
   display: flex;
   position: absolute;
   right: 0px;
-  width: 60px;
+  width: 0px;
   height: 69px;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   justify-content: center;
   align-items: center;
-  transform-origin: 99%;
-  transform: scaleX(0);
-  transition: transform 800ms cubic-bezier(0.25, 0.25, 0.73, 0.73);
+  transition: all 0.3s ease-in-out;
 }
 #menu .menu__card .menu__card__description .container-check .check {
   color: #99E2D0;
@@ -465,14 +468,15 @@ header .website-logo {
   width: 16px;
   text-align: center;
   font-size: 13px;
-  transition: transform 800ms cubic-bezier(0.1, 0.39, 0.59, 0.99);
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
 }
 #menu .menu__card .menu__card__description:hover .container-check {
-  transform: scaleX(1);
+  background: #99E2D0;
+  width: 60px;
 }
 #menu .menu__card .menu__card__description:hover .container-check .check {
-  transform: rotate(360deg);
-  transition: transform 800ms cubic-bezier(0.1, 0.39, 0.59, 0.99);
+  transform: scale(1);
 }
 #menu .note--enchantee {
   height: 365px;
@@ -480,11 +484,8 @@ header .website-logo {
 #menu button {
   margin: 32px 0px 0px;
 }
-#menu .menu__card__description:hover {
-  justify-content: flex-start;
-}
 #menu .menu__card__description:hover.menu__card__description p {
-  width: 71%;
+  width: 73%;
 }
 #menu .menu__card__description:hover.menu__card__description h2 {
   width: 80%;
@@ -492,27 +493,25 @@ header .website-logo {
   overflow: hidden;
   white-space: nowrap;
 }
-@media screen and (min-width: 768px) {
-  #menu .menu__card__description:hover.menu__card__description p {
-    width: 85%;
-  }
-}
-@keyframes cascade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 #menu .menu__card:nth-child(2) {
-  animation: cascade 1s;
+  animation: cascade 1s forwards;
 }
 #menu .menu__card:nth-child(3) {
-  animation: cascade 4s;
+  animation: cascade 4s forwards;
 }
 #menu .menu__card:nth-child(4) {
-  animation: cascade 8s;
+  animation: cascade 8s forwards;
+  z-index: 0;
+}
+@keyframes cascade {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 @media screen and (max-width: 374px) {
